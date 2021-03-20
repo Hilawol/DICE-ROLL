@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  outline:none;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
+html{
+  font-size: 10px;
+}
+/* ---------------------------- Player -----------------------------*/
+
+/* the players div*/
+.players{
+  display: flex;
+  padding:2rem;
+}
+.player{
+  width:50%;
+  height:60vh;
+  margin: 2rem 0;
+  text-align: center;
+  background-color:#8ea6b4;
+  border-radius: 1rem;
+}
+
+.playerName{
+  margin: 1rem 0;
+}
+
+/* ------------- dice */
+.dices{
+  width:10rem;
+  display:flex;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  top: 25%; left: 0; bottom: 0; right: 0;
+}
+
+.dice{
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
+  margin:5px 0;
+  background-position: center/cover;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.currentPlayer{
+  background-color: #e7eff3;
+}
+.btn{
+  height: 3rem;
+  width:10rem;
+}
+
+.btnDisable{
+  opacity: 0.8;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boardGame{
+  /* background: url("./img/49b66ea82576d0be97db20d4920d5123.jpg") no-repeat center center/cover ; */
+  background-color: #ff8f56;
+  width:80vw;
+  height:80vh;
+  margin:auto;
+  /* display: flex; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#winScore{
+  width:5rem;
+  height: 3rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.totalScore{
+  margin:5rem 0;
+  height: 30%;
+  width:100%;
+  font-size: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roundScore{
+  margin:5rem 0;
+  height: 15%;
+  width:100%;
+  font-size: 3rem;
 }
+
+.winner{
+  background-image: url("https://i.gifer.com/6ob.gif");
+}
+
+
+/* "https://i.gifer.com/2ii9.gif" */
