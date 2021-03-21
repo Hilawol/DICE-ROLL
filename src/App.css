@@ -118,20 +118,10 @@ html{
 .winner{
   position: relative;
   background-image: url("https://i.gifer.com/6ob.gif");
-}
-
-.winner::after{
-  content:"YOU ARE THE WINNER!";
-  position:absolute;
-  top:50%;
-  left:0;
-  bottom:0;
-  right:0;
   font-size: 3rem;
   text-align: center;
   color:#ea7362
 }
-
 .action{
   display: flex;
   flex-direction: column;
@@ -144,6 +134,10 @@ html{
 
 .newGame{
   width: 15rem;
+}
+
+.hidden{
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {
@@ -193,9 +187,7 @@ html{
   .newGame{
     width:12rem;
   }
-
-  .winner::after{
+  .winner p{
     font-size: 2rem;
-    top:70%;
   }
 }
