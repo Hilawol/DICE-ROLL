@@ -4,29 +4,33 @@
   padding:0;
   outline:none;
   border-radius: 5px;
+  font-family: 'Righteous', cursive;
 }
 
 html{
   font-size: 10px;
 }
-/* ---------------------------- Player -----------------------------*/
 
+/* ---------------------------- Player -----------------------------*/
 /* the players div*/
 .players{
   display: flex;
   padding:2rem;
+  width:100%;
 }
 .player{
-  width:50%;
+  width:100%;
   height:60vh;
   margin: 2rem 0;
   text-align: center;
-  background-color:#8ea6b4;
+  background-color:#d7eaea;
   border-radius: 1rem;
 }
 
 .playerName{
   margin: 1rem 0;
+  font-size: 3rem;
+
 }
 
 /* ------------- dice */
@@ -34,9 +38,6 @@ html{
   width:10rem;
   display:flex;
   flex-direction: column;
-  margin: auto;
-  position: absolute;
-  top: 25%; left: 0; bottom: 0; right: 0;
 }
 
 .dice{
@@ -51,50 +52,149 @@ html{
 }
 
 .currentPlayer{
-  background-color: #e7eff3;
+  background-color: #acdbdf;
 }
+
 .btn{
   height: 3rem;
   width:10rem;
+  margin: 1rem 0;
+  border:none;
+  font-size: 2.3rem;
+  background-color:#ea7362;
+  color:#ffd6b6;
+  box-shadow: 5px 5px 10px  #5c2626;
+  cursor: pointer;
 }
+
+.btn:hover, .newGame:hover{
+  color:#5c2626;
+  box-shadow: 5px 5px 10px  #ffd6b6;
+}
+/* .dices .btn{
+  width:10rem;
+} */
 
 .btnDisable{
   opacity: 0.8;
   pointer-events: none;
+  background-color: gray;
 }
 
-.boardGame{
-  /* background: url("./img/49b66ea82576d0be97db20d4920d5123.jpg") no-repeat center center/cover ; */
-  background-color: #ff8f56;
-  width:80vw;
-  height:80vh;
+#boardGame{
+  position: relative;
+  background-color: #69779b;
+  width:100vw;
+  height:100vh;
   margin:auto;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #winScore{
-  width:5rem;
+  width:10rem;
   height: 3rem;
   text-align: center;
+  border:none;
+  margin: 1rem 0 ;
 }
 
+
 .totalScore{
-  margin:5rem 0;
+  margin:6rem 0;
   height: 30%;
   width:100%;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .roundScore{
   margin:5rem 0;
   height: 15%;
   width:100%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .winner{
+  position: relative;
   background-image: url("https://i.gifer.com/6ob.gif");
 }
 
+.winner::after{
+  content:"YOU ARE THE WINNER!";
+  position:absolute;
+  top:50%;
+  left:0;
+  bottom:0;
+  right:0;
+  font-size: 3rem;
+  text-align: center;
+  color:#ea7362
+}
 
-/* "https://i.gifer.com/2ii9.gif" */
+.action{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: absolute;
+  width:10rem;
+  height: 50vh;
+  top: -30%; left: 0; bottom: 0; right: 0;
+}
+
+.newGame{
+  width: 15rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .players{
+    flex-direction: column;
+  }
+  .player{
+    height: 42vh;
+    margin:0;
+    padding-top: 2rem;
+  }
+
+  .playerName{
+    font-size: 2.5rem;
+  }
+  .totalScore{
+    margin:1rem 0;
+    font-size: 2.5rem;
+  }
+
+  .roundScore{
+    margin:1rem 0;
+  }
+
+  .dices{
+    flex-direction: row;
+    width:100vw;
+  }
+
+  .dice{
+    height: 6rem;
+    width:6rem;
+    margin:0 5px;
+  }
+
+  .btn,#winScore{
+    width: 6rem;
+    margin-right:10px;
+  }
+  .action{
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 30%; right:60%; 
+  }
+  .newGame{
+    width:12rem;
+  }
+
+  .winner::after{
+    font-size: 2rem;
+  }
+}

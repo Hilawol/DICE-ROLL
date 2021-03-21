@@ -3,7 +3,6 @@ import Score from './Score'
 
 export default class Player extends Component {
   render() {
-    console.log("render player id:", this.props.id, "roundscore:", this.props.roundScore);
     let className = "player";
     if (this.props.currentPlayer === this.props.id) {
       className = className + " currentPlayer";
@@ -14,8 +13,8 @@ export default class Player extends Component {
     return (
       <div id={this.props.id} className={className}>
         <h3 className="playerName">{this.props.name}</h3>
-        <Score class="totalScore" title="Total" score={this.props.totalScore} />
-        <Score class="roundScore" title="Current" score={this.props.roundScore} />
+        <Score class="totalScore" title="Total Points" score={this.props.totalScore} />
+        <Score class="roundScore" title="Current Round" score={this.props.roundScore} />
       </div>
     )
   }

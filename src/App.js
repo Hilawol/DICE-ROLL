@@ -1,12 +1,16 @@
+import { Component } from 'react';
 import './App.css';
 import BoardGame from './components/BoardGame';
 
-function App() {
-  return (
-    <div className="App">
-      <BoardGame />
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return (
+      <div className="App" >
+        <BoardGame />
+      </div>
+    );
+  }
 }
 
 export default App;

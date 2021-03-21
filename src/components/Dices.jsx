@@ -26,7 +26,6 @@ export default class Dices extends Component {
       <div className="dices">
         <Dice id="dice1" img={url1} value={this.state.dices[0]} />
         <Dice id="dice2" img={url2} value={this.state.dices[1]} />
-        {/* <button onClick={this.onRollDice} className={this.props.gameOver ? "btnDisable" : ""}>Roll</button> */}
         <Button onClick={this.onRollDice} text="Roll" gameOver={this.props.gameOver} />
       </div>
     )
