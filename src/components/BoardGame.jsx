@@ -29,7 +29,6 @@ export default class BoardGame extends Component {
     }
   }
   onNewGame = () => {
-    console.log("newGame");
     this.setState(this.getInitialState());
   }
 
